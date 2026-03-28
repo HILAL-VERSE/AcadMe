@@ -13,5 +13,6 @@
         public bool IsActive { get; set; } = true;
         public Semester Semester { get; set; } = null!;
         public List<AttendanceLog> AttendanceLogs { get; set; } = new List<AttendanceLog>();
+        public Result? Result { get; set; }
     }
 }
