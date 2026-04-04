@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AcadMe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="AcadMe" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Background="#1B2A4A">
+            <StackPanel  VerticalAlignment="Top">
+                <Button Content="Dashboard" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1"></Button>
+                <Button Content="Subjects" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White"></Button>
+                <Button Content="Attendance" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1"></Button>
+                <Button Content="Practicals" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1"></Button>
+                <Button Content="Tasks" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1"></Button>
+                <Button Content="Results" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1"></Button>
+                <Button Content="Settings" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1"></Button>
+            </StackPanel>
+        </Border>
+        <Border Grid.Column="1">
+            <TextBlock Text="Select a screen" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="45"></TextBlock>
+        </Border>
     </Grid>
 </Window>
