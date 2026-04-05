@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AcadMe.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -10,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AcadMe.ViewModels;
 
 namespace AcadMe.Views
 {
@@ -21,6 +23,7 @@ namespace AcadMe.Views
         public SubjectsView()
         {
             InitializeComponent();
+            DataContext = new SubjectsViewModel();
         }
     }
 }

@@ -7,6 +7,24 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock Text="Hello World" FontSize="30" />
+        <TextBlock Text="Subjects" FontSize="30" HorizontalAlignment="left" Foreground="Black" Margin="30 20" FontWeight="Bold"/>
+        <DataGrid x:Name="dgSubjects"
+                  Margin="30 75 30 10"
+                  BorderBrush="White"
+                  BorderThickness="2"
+                  CanUserResizeColumns="False"
+                  AutoGenerateColumns="False"
+                  ItemsSource="{Binding Subjects}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"  Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Semester" Binding="{Binding SemesterId}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Code" Binding="{Binding CourseCode}"  Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Type" Binding="{Binding Type}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Credits" Binding="{Binding Credits}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Practical" Binding="{Binding HasPractical}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Active" Binding="{Binding IsActive}" Width="*"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>
