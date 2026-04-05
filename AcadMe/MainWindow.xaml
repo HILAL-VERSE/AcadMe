@@ -13,17 +13,19 @@
         </Grid.ColumnDefinitions>
         <Border Grid.Column="0" Background="#1B2A4A">
             <StackPanel  VerticalAlignment="Top">
-                <Button Content="Dashboard" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1"></Button>
-                <Button Content="Subjects" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White"></Button>
-                <Button Content="Attendance" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1"></Button>
-                <Button Content="Practicals" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1"></Button>
-                <Button Content="Tasks" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1"></Button>
-                <Button Content="Results" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1"></Button>
-                <Button Content="Settings" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1"></Button>
+                <Button Content="Dashboard" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1" Click="Dashboard_Click"></Button>
+                <Button Content="Subjects" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Click="Subject_Click"></Button>
+                <Button Content="Attendance" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1" Click="Attendance_Click"></Button>
+                <Button Content="Practicals" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1" Click="Practicals_Click"></Button>
+                <Button Content="Tasks" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1" Click="Tasks_Click"></Button>
+                <Button Content="Results" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1" Click="Results_Click"></Button>
+                <Button Content="Settings" Margin="0, 15, 0, 0" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1" Click="Settings_Click"></Button>
             </StackPanel>
         </Border>
         <Border Grid.Column="1">
-            <TextBlock Text="Select a screen" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="45"></TextBlock>
+            <ContentControl x:Name="MainContent" 
+                            HorizontalContentAlignment="Stretch"
+                            VerticalContentAlignment="Stretch" />
         </Border>
     </Grid>
 </Window>
