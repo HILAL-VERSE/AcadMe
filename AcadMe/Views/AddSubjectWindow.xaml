@@ -1,0 +1,55 @@
+﻿<Window x:Class="AcadMe.Views.AddSubjectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AcadMe.Views"
+        mc:Ignorable="d"
+        Title="Add Subject" Height="450" Width="400">
+    <Grid Margin="20" VerticalAlignment="Top" HorizontalAlignment="Left">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Left" Width="300" Grid.Row="0">
+            <TextBlock Text="Add Subject" FontWeight="Bold" FontSize="20" Width="115"/>
+            <Label Content="Enter Your Course Code" Height="30"/>
+            <TextBox x:Name="txtcourseCode" Height="20" Width="80" BorderBrush="Black" BorderThickness="1"/>
+            
+            <Label Content="Enter Course Title" Height="30"/>
+            <TextBox x:Name="txtTitle" Height="25" Width="250" BorderBrush="Black" BorderThickness="1"/>
+
+            <Label Content="Select the semester number" Height="30"/>
+            <!--
+            <ComboBox x:Name="cmbSemesterNo" Width="80">
+                <ComboBoxItem Content="1"/>
+                <ComboBoxItem Content="2"/>
+                <ComboBoxItem Content="3"/>
+                <ComboBoxItem Content="4"/>
+                <ComboBoxItem Content="5"/>
+                <ComboBoxItem Content="6"/>
+            </ComboBox> -->
+
+            <Label Content="Select the type of subject" Height="30"/>
+            <ComboBox x:Name="cmbSubjectType" Width="80">
+                <ComboBoxItem Content="Major"/>
+                <ComboBoxItem Content="Minor"/>
+                <ComboBoxItem Content="Foundation"/>
+                <ComboBoxItem Content="Audit"/>
+            </ComboBox>
+
+            <Label Content="Enter Course Credit" Height="30"/>
+            <TextBox x:Name="txtCredit" Height="25" Width="60" BorderBrush="Black" BorderThickness="1"/>
+
+            <CheckBox x:Name="chPractical" 
+              Content="HasPractical"/>
+
+            <CheckBox x:Name="chkAudit" 
+              Content="Is Audit"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Center" Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Content="Save" Height="30" Width="70" Background="Navy" Foreground="White" BorderThickness="1" Click="btnSave_Click"></Button>
+            <Button Content="Cancel" Height="30" Width="70" Background="White" Foreground="Navy" BorderThickness="1" Click="btnCancel_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

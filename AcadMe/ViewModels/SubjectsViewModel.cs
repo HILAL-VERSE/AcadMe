@@ -37,6 +37,13 @@ namespace AcadMe.ViewModels
             Subjects = new ObservableCollection<Subject>(subjects);
         }
 
+        public void SaveSubject(Subject dbSubject)
+        {
+            _dbContext.Subjects.Add(dbSubject);
+            _dbContext.SaveChanges();
+            LoadSubjects();
+        }
+
         private void SeedInitialData()
         {
             if (!_dbContext.Semesters.Any())

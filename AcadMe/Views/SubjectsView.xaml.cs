@@ -25,5 +25,15 @@ namespace AcadMe.Views
             InitializeComponent();
             DataContext = new SubjectsViewModel();
         }
+
+        private void btnAddSubject_Click(object sender, RoutedEventArgs e)
+        {
+            AddSubjectWindow AddSubject = new AddSubjectWindow();
+            if(AddSubject.ShowDialog() == true && AddSubject.NewSubject != null)
+            {
+                var vm = (SubjectsViewModel)DataContext;
+                vm.SaveSubject(AddSubject.NewSubject);
+            }
+        }
     }
 }
